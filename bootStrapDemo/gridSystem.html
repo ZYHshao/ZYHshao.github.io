@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>栅格系统演示</title>
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<style>
+			div {
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+
+	<body class="container">
+		<p>将md以上尺寸窗口宽度分为12份，md一下尺寸的窗口将竖直堆叠排列</p>
+		<div class="row">
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+		</div>
+		<hr />
+		<p>将md以上尺寸的窗口宽度进行2等分，md一下尺寸的窗口将竖直堆叠排列</p>
+		<div class="row">
+			<div class="col-md-6">.col-md-6</div>
+			<div class="col-md-6">.col-md-6</div>
+		</div>
+		<hr />
+		<p>将md以上尺寸的窗口宽度进行2:1等分，md一下尺寸的窗口将竖直堆叠排列</p>
+		<div class="row">
+			<div class="col-md-8">.col-md-8</div>
+			<div class="col-md-4">.col-md-4</div>
+		</div>
+		<hr />
+		<p>将xs以上尺寸的窗口宽度进行6等分，xs为最小等级</p>
+		<div class="row">
+			<div class="col-xs-2">.col-xs-2</div>
+			<div class="col-xs-2">.col-xs-2</div>
+			<div class="col-xs-2">.col-xs-2</div>
+			<div class="col-xs-2">.col-xs-2</div>
+			<div class="col-xs-2">.col-xs-2</div>
+			<div class="col-xs-2">.col-xs-2</div>
+		</div>
+		<hr />
+		<p>在md及以上尺寸窗口中进行4等分，在md以下尺寸sm以上尺寸窗口进行2等分布局，在sm以下储存窗口进行竖直堆叠布局</p>
+		<div class="row">
+			<div class="col-md-3 col-sm-6">.col-md-3 .col-sm-6</div>
+			<div class="col-md-3 col-sm-6">.col-md-3 .col-sm-6</div>
+			<div class="col-md-3 col-sm-6">.col-md-3 .col-sm-6</div>
+			<div class="col-md-3 col-sm-6">.col-md-3 .col-sm-6</div>
+		</div>
+		<hr />
+		<p>列高度不均等造成的布局错乱</p>
+		<div class="row">
+			<div class="col-md-6">.col-md-4 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+			<div class="col-md-6">.col-md-4</div>
+			<div class="col-md-4 ">.col-md-4</div>
+		</div>
+		<hr />
+		<p>解决列高度不均等造成的布局错乱</p>
+		<div class="row">
+			<div class="col-md-6">.col-md-4 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+			<div class="col-md-6">.col-md-4</div>
+			<div class="clearfix visible-md-block"></div>
+			<div class="col-md-4 ">.col-md-4</div>
+		</div>
+		<hr />
+		<p>进行列偏移操作</p>
+		<p>将占1/3行的一列向右便宜1/3行 使其固定在中间</p>
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">.col-md-2</div>
+			<div class="col-md-2 col-md-offset-8">.col-md-2 .col-md-offset-8</div>
+		</div>
+		<hr />
+		<p>进行列的嵌套</p>
+		<div class="row">
+			<div class="col-md-8">.col-md-8
+				<div class="row">
+					<div class="col-md-6">.col-md-6</div>
+					<div class="col-md-6">.col-md-6</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<p>进行列的移动</p>
+		<div class="row">
+			<div class="col-md-2 col-md-push-8">.col-md-8 向右移动8格</div>
+			<div class="col-md-2 col-md-pull-2">.col-md-2 向左移动2格</div>
+		</div>
+		<br />
+		<br />
+	</body>
+
+</html>

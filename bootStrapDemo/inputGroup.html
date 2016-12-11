@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<style>
+			ul{
+				display: block !important; 
+			}
+		</style>
+		<title>输入框组演示</title>
+	</head>
+
+	<body class="container">
+		<br />
+		<br />
+		<p>输入框的前后可以添加额外的标题元素</p>
+		<div class="input-group form-group">
+			<span class="input-group-addon">邮箱</span>
+			<input type="text" class="form-control" placeholder="邮箱">
+		</div>
+		<div class="input-group form-group">
+			<input type="text" class="form-control">
+			<span class="input-group-addon">平米</span>
+		</div>
+		<div class="input-group form-group">
+			<span class="input-group-addon">余额</span>
+			<input type="text" class="form-control">
+			<span class="input-group-addon">.00</span>
+		</div>
+		<hr />
+		<p>将输入框组合为选择组件</p>
+		<div class="input-group form-group">
+			<span class="input-group-addon">
+                <input type="checkbox">
+            </span>
+			<input type="text" class="form-control">
+		</div>
+		<div class="input-group form-group">
+			<span class="input-group-addon">
+                <input type="radio">
+            </span>
+			<input type="text" class="form-control">
+		</div>
+		<hr />
+		<p>为输入框添加功能按钮</p>
+		<div class="input-group form-group">
+			<span class="input-group-btn">
+                <button class="btn btn-default" type="button">星座</button>
+            </span>
+			<input type="text" class="form-control">
+		</div>
+		<div class="input-group form-group">
+			<input type="text" class="form-control">
+			<span class="input-group-btn">
+                <button class="btn btn-primary" type="button">前往</button>
+            </span>
+		</div>
+		<hr />
+		<p>在输入框组件中嵌套下拉菜单组件</p>
+		<div class="input-group">
+			<div class="input-group-btn">
+				<button type="button" class="btn btn-default dropdown-toggle">星座 <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">金牛</a>
+					</li>
+					<li>
+						<a href="#">狮子</a>
+					</li>
+					<li>
+						<a href="#">摩羯</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">无</a>
+					</li>
+				</ul>
+			</div>
+			<input type="text" class="form-control">
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<div class="input-group col-md-6">
+			<input type="text" class="form-control">
+			<div class="input-group-btn">
+				<button type="button" class="btn btn-default">金牛</button>
+				<button class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">金牛</a>
+					</li>
+					<li>
+						<a href="#">狮子</a>
+					</li>
+					<li>
+						<a href="#">摩羯</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">无</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+	</body>
+
+</html>

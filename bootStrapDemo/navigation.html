@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<style>
+			ul {
+				display: block !important;
+			}
+		</style>
+		<title>导航栏演示</title>
+	</head>
+
+	<body class="container">
+		<br />
+		<br />
+		<br />
+		<br />
+		<p>导航分为两种，页卡模式和胶囊模式</p>
+		<p>页卡模式</p>
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a>主页</a>
+			</li>
+			<li>
+				<a>活动</a>
+			</li>
+			<li>
+				<a>留言</a>
+			</li>
+		</ul>
+		<hr />
+		<p>胶囊模式</p>
+		<ul class="nav nav-pills">
+			<li class="active">
+				<a>主页</a>
+			</li>
+			<li>
+				<a>活动</a>
+			</li>
+			<li>
+				<a>留言</a>
+			</li>
+		</ul>
+		<hr />
+		<p>堆叠排列的胶囊导航</p>
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active">
+				<a>主页</a>
+			</li>
+			<li>
+				<a>活动</a>
+			</li>
+			<li>
+				<a>留言</a>
+			</li>
+		</ul>
+		<hr />
+		<p>导航中嵌套下拉菜单</p>
+		<ul class="nav nav-pills">
+			<li>
+				<a>主页</a>
+			</li>
+			<li>
+				<a>活动</a>
+			</li>
+			<li>
+				<a>留言</a>
+			</li>
+			<li class="dropdown active">
+				<a class="dropdown-toggle">
+					更多
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a>个人中心</a>
+					</li>
+					<li>
+						<a>设置</a>
+					</li>
+					<li>
+						<a>退出</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<br />
+		<br />
+		<br />
+		<br />
+		<hr />
+		<p>自定义导航条</p>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand"><img src="image/icon.png" width="20px" /></a>
+				</div>
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button class="btn btn-default">Search</button>
+				</form>
+				<button class="btn btn-warning navbar-btn navbar-left">提示</button>
+				<p class="navbar-text">导航文本</p>
+			</div>
+		</nav>
+		<hr />
+		<p>将导航栏固定在顶部</p>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand"><img src="image/icon.png" width="20px" /></a>
+				</div>
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button class="btn btn-default">Search</button>
+				</form>
+				<button class="btn btn-warning navbar-btn navbar-left">提示</button>
+				<p class="navbar-text">导航文本</p>
+			</div>
+		</nav>
+		<hr />
+		<p>将导航栏固定在底部</p>
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand"><img src="image/icon.png" width="20px" /></a>
+				</div>
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button class="btn btn-default">Search</button>
+				</form>
+				<button class="btn btn-warning navbar-btn navbar-left">提示</button>
+				<p class="navbar-text">导航文本</p>
+			</div>
+		</nav>
+		<hr />
+		<p>静止在顶部</p>
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand"><img src="image/icon.png" width="20px" /></a>
+				</div>
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button class="btn btn-default">Search</button>
+				</form>
+				<button class="btn btn-warning navbar-btn navbar-left">提示</button>
+				<p class="navbar-text">导航文本</p>
+			</div>
+		</nav>
+		<hr />
+		<p>将导航条进行反色处理</p>
+		<nav class="navbar navbar-default navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand"><img src="image/icon.png" width="20px" /></a>
+				</div>
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button class="btn btn-default">Search</button>
+				</form>
+				<button class="btn btn-warning navbar-btn navbar-left">提示</button>
+				<p class="navbar-text">导航文本</p>
+			</div>
+		</nav>
+		<hr />
+		<p>进行路径导航的创建</p>
+		<ol class="breadcrumb">
+			<li>
+				<a href="#">主页</a>
+			</li>
+			<li>
+				<a href="#">新闻列表</a>
+			</li>
+			<li class="active">国际新闻</li>
+		</ol>
+		<br />
+		<br />
+
+	</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<title></title>
+	</head>
+
+	<body class="container">
+		<br />
+		<br />
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal">
+  		正常模态框
+		</button>
+		<!-- Modal -->
+		<div class="modal fade" role="dialog" id="myModal" tabindex="-1" data-show="true"  data-backdrop="false" data-keyboard="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">模态框标题</h4>
+					</div>
+					<div class="modal-body">
+						模态框内容
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalBig">
+  		大尺寸模态框
+		</button>
+		<!-- Modal -->
+		<div class="modal fade" id="myModalBig">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">模态框标题</h4>
+					</div>
+					<div class="modal-body">
+						模态框内容
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalSm">
+  		小尺寸模态框
+		</button>
+		<!-- Modal -->
+		<div class="modal fade" id="myModalSm">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">模态框标题</h4>
+					</div>
+					<div class="modal-body">
+						模态框内容
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNoFade">
+  		无动画模态框
+		</button>
+		<!-- Modal -->
+		<div class="modal" id="myModalNoFade">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">模态框标题</h4>
+					</div>
+					<div class="modal-body">
+						模态框内容
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<p>通过代码直接弹出或隐藏模态框</p>
+		<button class="btn bg-primary" id="open">弹出模态框</button>
+		<button class="btn bg-primary" id="close">隐藏模态框</button>
+		<button class="btn bg-primary" id="exchange">切换模态框</button>
+		<button class="btn bg-primary" id="setting">设置模态框属性</button>
+		<br />
+		<br />
+	</body>
+<script>
+	$('#open').on("click",function(){
+		$('#myModal').modal('show');
+	});
+	$('#close').on("click",function(){
+		$('#myModal').modal('hide');
+	});
+	$('#exchange').on("click",function(){
+		$('#myModal').modal('toggle');
+	});
+	$('#setting').on("click",function(){
+		$('#myModal').modal({
+			keyboard:false
+		});
+	});
+	$('#myModal').on('show.bs.modal',function(e){
+		console.log("模态框将要展示触发")
+	});
+	$('#myModal').on('shown.bs.modal',function(e){
+		console.log("模态框已经展示后触发")
+	});
+	$('#myModal').on('hide.bs.modal',function(e){
+		console.log("模态框将要消失触发")
+	});
+	$('#myModal').on('hidden.bs.modal',function(e){
+		console.log("模态框已经消失后触发")
+	});
+	$('#myModal').on('loaded.bs.modal',function(e){
+		console.log("模态框已经加载完成后触发")
+	});
+</script>
+</html>

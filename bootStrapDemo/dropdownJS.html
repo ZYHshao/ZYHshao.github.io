@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<title>下拉列表演示</title>
+	</head>
+
+	<body class="container">
+		<br />
+		<br />
+		<div class="dropdown col-md-2" id="drop">
+			<button class="btn dropdown-toggle btn-primary" data-toggle="dropdown">
+   				下拉列表
+   				<span class="caret"></span>
+  			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a>金牛座</a>
+				</li>
+				<li>
+					<a>摩羯座</a>
+				</li>
+				<li>
+					<a>狮子座</a>
+				</li>
+				<li>
+					<a>白羊座</a>
+				</li>
+			</ul>
+		</div>
+		<div class="dropdown col-md-2"  id="myDropMenu">
+			<button class="btn btn-default dropdown-toggle" id="dropBtn" data-toggle="dropdown">
+   				下拉列表
+   				<span class="caret"></span>
+  			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a>金牛座</a>
+				</li>
+				<li>
+					<a>摩羯座</a>
+				</li>
+				<li>
+					<a>狮子座</a>
+				</li>
+				<li>
+					<a>白羊座</a>
+				</li>
+			</ul>
+		</div>
+		<button class="btn btn-warning col-md-2" id="btnClose">关闭</button>
+		<br />
+		<br />
+	</body>
+	<script>
+		$('#btnClose').on('click', function() {
+			$('#dropBtn').dropdown('toggle');
+		});
+		$('#myDropMenu').on('show.bs.dropdown',function(){
+			console.log("下拉框将要展示");
+		});
+		$('#myDropMenu').on('shown.bs.dropdown',function(){
+			console.log("下拉框已经展示");
+		});
+		$('#myDropMenu').on('hide.bs.dropdown',function(){
+			console.log("下拉框将要隐藏");
+		});
+		$('#myDropMenu').on('hidden.bs.dropdown',function(){
+			console.log("下拉框已经展示");
+		});
+	</script>
+
+</html>

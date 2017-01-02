@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<title>标签页演示</title>
+	</head>
+
+	<body class="container">
+		<br />
+		<br />
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a href="#one" data-toggle="tab" id="aone">第一页</a>
+			</li>
+			<li>
+				<a href="#two" data-toggle="tab" id="atwo">第二页</a>
+			</li>
+			<li>
+				<a href="#three" data-toggle="tab" id="athree">第三页</a>
+			</li>
+			<li>
+				<a href="#four" data-toggle="tab" id="afour">第四页</a>
+			</li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div class="tab-pane active fade in" id="one">On iPhone 7 and iPhone 7 Plus, haptics provide additional ways to physically engage users with tactile feedback that gets attention and reinforces actions. Some system-provided interface elements, such as pickers, switches, and sliders, automatically provide haptic feedback as users interact with them</div>
+			<div class="tab-pane" id="two">Using one of the concrete subclasses, you ask the system to generate haptics for a specific scenario and iOS manages the strength and behavior of the feedback based on the scenario you choose. In addition, you can call the prepare method of UIFeedbackGenerator to inform the system that haptic feedback is about to be required and to minimize latency. To learn how to use haptics to provide the best user experience in your app, see “Haptic Feedback” in iOS Human Interface Guidelines.
+
+</div>
+			<div class="tab-pane" id="three">When the user makes a request involving your service, SiriKit sends your extension an intent object, which describes the user’s request and provides any data related to that request. You use the intent object to provide an appropriate response object, which includes details of how you can handle the user’s request. Siri typically handles all user interactions, but you can use an extension to provide custom UI that incorporates branding or additional information from your app.</div>
+			<div class="tab-pane" id="four">To learn how to support SiriKit and give users new ways to access your services, read SiriKit Programming Guide. When you’re ready to implement the app extensions that handle various intents, see Intents Framework Reference and Intents UI Framework Reference.
+
+</div>
+		</div>
+		<button class="btn btn-primary" id="cone">第一页</button>
+		<button class="btn btn-primary" id="ctwo">第二页</button>
+		<button class="btn btn-primary" id="cthree">第三页</button>
+		<button class="btn btn-primary" id="cfour">第四页</button>
+		<script>
+			$("#cone").on("click",function(){
+				$("#aone").tab('show');
+			});
+			$("#ctwo").on("click",function(){
+				$("#atwo").tab('show');
+			});
+			$("#cthree").on("click",function(){
+				$("#athree").tab('show');
+			});
+			$("#cfour").on("click",function(){
+				$("#afour").tab('show');
+			});
+			$("#aone").on("show.bs.tab",function(){
+				console.log("此标签页将要显示");
+			});
+			$("#aone").on("shown.bs.tab",function(){
+				console.log("此标签页已经显示");
+			});
+			$("#aone").on("hide.bs.tab",function(){
+				console.log("此标签页将要隐藏");
+			});
+			$("#aone").on("hidden.bs.tab",function(){
+				console.log("此标签页已经隐藏");
+			});
+		</script>
+	</body>
+
+</html>

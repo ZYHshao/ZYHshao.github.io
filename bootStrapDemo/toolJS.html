@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<title>工具条演示</title>
+	</head>
+	<body class="container">
+		<br />
+		<br />
+		<button class="btn btn-primary" data-toggle="tooltip" data-placement="top" id="btn">工具条</button>
+		<button class="btn btn-default" id='show'>开启</button>
+		<button class="btn btn-default" id='hide'>关闭</button>
+		<button class="btn btn-default" id='toggle'>切换</button>
+	</body>
+	<script>
+		$("#btn").tooltip({
+			animation:false,
+			delay:1000,
+			placement:'top',
+			title:'标题！！！！',
+			trigger:'click'
+		});
+		$('#show').on('click',function(){
+			$('#btn').tooltip('show');
+		});
+		$('#hide').on('click',function(){
+			$('#btn').tooltip('hide');
+		});
+		$('#toggle').on('click',function(){
+			$('#btn').tooltip('toggle');
+		});
+		$('#btn').on('show.bs.tooltip',function(){
+			console.log("工具条将要开启");
+		});
+		$('#btn').on('shown.bs.tooltip',function(){
+			console.log("工具条已经开启");
+		});
+		$('#btn').on('hide.bs.tooltip',function(){
+			console.log("工具条将要关闭");
+		});
+		$('#btn').on('hidden.bs.tooltip',function(){
+			console.log("工具条已经关闭");
+		});
+	</script>
+</html>
